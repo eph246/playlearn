@@ -1,15 +1,18 @@
 import 'package:flutter/material.dart';
 import './pages/letters_page.dart';
+import './pages/numbers_page.dart';
+import './pages/shapes_page.dart';
+
 
 void main() {
-  runApp(EduKidsApp());
+  runApp(PlayLearnApp());
 }
 
-class EduKidsApp extends StatelessWidget {
+class PlayLearnApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'EduKids',
+      title: 'PlayLearn',
       theme: ThemeData(
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
@@ -35,7 +38,7 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.lightBlue[50],
       appBar: AppBar(
-        title: Text('EduKids Home'),
+        title: Text('PlayLearn Home'),
         centerTitle: true,
       ),
       body: GridView.count(
@@ -53,10 +56,22 @@ class HomePage extends StatelessWidget {
               padding: EdgeInsets.all(16),
             ),
             onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => LettersPage()),
-              );
+              if (item['title'] == 'Letters') {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => LettersPage()),
+                );
+              } else if (item['title'] == 'Numbers') {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => NumbersPage()),
+                );
+              } else if (item['title'] == 'Shapes') {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => ShapesPage()),
+                  );
+              }
               // TODO: Tambahkan navigasi ke halaman masing-masing
             },
             child: Column(
