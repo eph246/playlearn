@@ -51,6 +51,8 @@ dev_dependencies:
 
 # The following section is specific to Flutter packages.
 flutter:
+  uses-material-design: true
+  
   assets:
     - assets/images/letters/
     - assets/sounds/letters/
@@ -60,6 +62,11 @@ flutter:
     - assets/sounds/shapes/
     - assets/images/animals/
     - assets/sounds/animals/
+    - assets/images/colors/
+    - assets/sounds/colors/
+    - assets/images/robloxbg.png
+    - assets/images/kid_quiz.png
+
 
 
   # To add assets to your application, add an assets section, like this:
