@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import './pages/letters_page.dart';
 import './pages/numbers_page.dart';
 import './pages/shapes_page.dart';
+import './pages/animals_page.dart';
 
 
 void main() {
@@ -71,6 +72,11 @@ class HomePage extends StatelessWidget {
                     context,
                     MaterialPageRoute(builder: (context) => ShapesPage()),
                   );
+              } else if (item['title'] == 'Animals') {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => AnimalsPage()),
+                );
               }
               // TODO: Tambahkan navigasi ke halaman masing-masing
             },
