@@ -57,6 +57,10 @@ flutter:
     - assets/images/numbers/
     - assets/sounds/numbers/
     - assets/images/shapes/
+    - assets/sounds/shapes/
+    - assets/images/animals/
+    - assets/sounds/animals/
+
 
   # To add assets to your application, add an assets section, like this:
   # assets:
